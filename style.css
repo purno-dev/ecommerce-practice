@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Open Sans,sans-serif;
+  font-family: Open Sans, sans-serif;
 
 }
 
@@ -117,11 +117,13 @@ input:focus {
 .nav-bar a:hover {
   color: orange;
 }
-
+.shop-pannel {
+  z-index: 999;
+}
 
 .shop-pannel ul {
 
- 
+
   list-style: none;
   padding: 0px 20px;
   height: 3rem;
@@ -395,6 +397,7 @@ input:focus {
   color: white;
   background-color: orange;
 }
+
 .shop-pannel {
   position: sticky;
   top: 0;
@@ -403,7 +406,7 @@ input:focus {
 
 
 footer {
-  
+
   background-color: white;
   padding: 30px;
   margin: 0px 20px 0px 20px;
@@ -424,10 +427,12 @@ footer {
   width: 100%;
   max-width: 455px;
 }
+
 .contacts p {
-color: #666666;
-padding-bottom: 10px;
+  color: #666666;
+  padding-bottom: 10px;
 }
+
 .contacts {
   display: flex;
   flex-direction: column;
@@ -440,26 +445,31 @@ padding-bottom: 10px;
   width: 100%;
   max-width: 200px;
 }
+
 .footer-top {
-  
+
   display: flex;
   margin-top: 30px;
   justify-content: space-evenly;
 }
 
-.list-style ul,a{
+.list-style ul,
+a {
   padding: 10px 0px;
   list-style: none;
   text-decoration: none;
   color: #666666;
 }
-.list-style li, a {
+
+.list-style li,
+a {
   transition: all 200ms ease-in;
   padding: 5px 0px;
 }
 
 
-.list-style li, a:hover {
+.list-style li,
+a:hover {
   color: orange;
 }
 
@@ -468,6 +478,7 @@ padding-bottom: 10px;
   padding-top: 15px;
   padding-bottom: 20px;
 }
+
 .icons {
   height: 50px;
   width: auto;
@@ -476,7 +487,7 @@ padding-bottom: 10px;
 
 .social {
   margin-left: 30px;
-  
+
 }
 
 .play-app {
@@ -484,19 +495,20 @@ padding-bottom: 10px;
 }
 
 .footer-bottom {
- padding: 20px 0px 20px 0px; 
- display: flex;
+  padding: 20px 0px 20px 0px;
+  display: flex;
 
 }
+
 .copyright p {
   max-height: 50px;
   width: auto;
   min-width: 300px;
-  
+
 }
 
 .ssl img {
-  
+
   display: flex;
   max-height: 100px;
   max-width: 620px;
@@ -507,7 +519,7 @@ padding-bottom: 10px;
 .copyright {
   color: #666666;
   max-width: 221px;
-display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -515,16 +527,19 @@ display: flex;
 
 
 main {
-background-color: #FBF9F5;
-height: 100vh;
-padding: 0px 35px;
+  background-color: #FBF9F5;
+  height: auto;
+  padding: 0px 35px;
+  overflow: hidden;
+  padding-bottom: 50px;
+  
 }
 
 .top-selling-products {
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 300px 300px;
-gap: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 1em;
 
 }
 
@@ -532,15 +547,104 @@ gap: 1em;
   text-align: center;
   padding: 20px 0px;
 }
+
 .box {
+
+position: relative;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
 }
+.buy-card a {
+  color: black;
+  transition: all 200ms ease-in;
+}
+
 .box img {
+  transition: scale 300ms ease-in;
   height: 300px;
   width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.buy-card {
+
+  margin-left: 15px;
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.buy-card a:hover {
+  color: orange;
+}
+.buy-card > h3 {
+  color: orange;
+
+}
+
+.box:hover img {
+  scale: 1.1;
+  
+}
+
+.btn-add-cart {
+  transition: all 200ms ease-in;
+  width: 150px;
+  font-size: 1em;
+ font-weight: bold;
+ padding: 10px 0px;
+ color: orange;
+ outline: none;
+border: 1px solid orange;
+border-radius: 5px;
+ background-color: transparent;
+}
+
+.btn-buy {
+  transition: all 200ms ease-in;
+  width: 120px;
+  font-size: 1em;
+ font-weight: bold;
+ padding: 10px 0px;
+ color: white;
+ background-color: orange;
+ border: none;
+ border-radius: 5px;
+}
+.buy-card-btn {
+  margin: 50px 0px 50px 0px;
   
 }
 
 
+.btn-buy:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+.btn-add-cart:hover {
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}
+
+
+.best-selling {
+  display: flex;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  padding: 10px 10px 5px 5px ;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  z-index: 1;
+}
